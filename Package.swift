@@ -12,6 +12,7 @@ let package = Package(
             targets: ["MyPackage"]),
     ],
     dependencies: [
+        .package(url: "https://github.com/daltoniam/Starscream.git", from: "3.1.1")
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
     ],
@@ -20,7 +21,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "MyPackage",
-            dependencies: []),
+            dependencies: ["Starscream"],
+            path: "Sources"),
         .testTarget(
             name: "MyPackageTests",
             dependencies: ["MyPackage"]),

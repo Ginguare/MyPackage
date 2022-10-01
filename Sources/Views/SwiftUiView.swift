@@ -13,5 +13,6 @@ public struct SwiftUiView: View {
     public init() {}
     public var body: some View {
         Text("THIS IS THE SWIFTUIVIEW FROM THE PACKAGE")
+        Image("sterscream")
     }
 }
